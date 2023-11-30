@@ -44,8 +44,6 @@ Follow these steps to get the project up and running on your local machine:
        |   |-- test
        |-- models
        |   |-- random_forest_model.pkl
-       |-- utils
-       |   |-- feature_extraction.py
        |-- train_model.py
        |-- test_model.py
        |-- requirements.txt
@@ -68,11 +66,7 @@ from joblib import load
 # Load the trained model
 model = load("models/random_forest_model.pkl")
 
-# Extract MFCC features from audio
-audio_path = "path/to/audio/file.wav"
-features = extract_mfcc_features(audio_path)
-
-# Make a prediction
+# Make a prediction from MFCC features
 prediction = model.predict([features])
 
 print("Predicted Class:", prediction)
